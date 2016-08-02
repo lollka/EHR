@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="lollka.ehr.MainActivity">
+<!--
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:id="@+id/songName" />
+
+        <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/soundBar"
+            android:indeterminate="false" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/playButton"/>
+    </LinearLayout>
+-->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ehrlogo"
+        android:gravity="center"
+        android:layout_weight="20">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/logo"
+            android:adjustViewBounds="true"
+            android:maxHeight="100dp"
+            android:maxWidth="140dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/poga"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playButton"
+            android:src="@drawable/pausepoga"
+            android:background="#00000000"
+            android:maxHeight="100dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nosaukumi"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/songName"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/artistName"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/control"
+        android:layout_weight="10">
+
+        <ImageButton
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/audiomin"
+            android:layout_weight="2"
+            android:src="@drawable/min"
+            android:background="#00000000" />
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/soundBar"
+            android:layout_weight="20"
+            android:indeterminate="false" />
+
+        <ImageButton
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/audiomax"
+            android:layout_weight="2"
+            android:src="@drawable/max"
+            android:background="#00000000"
+            android:maxHeight="10dp"
+            android:maxWidth="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/social"
+        android:layout_weight="10"
+        android:paddingTop="20dp">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10" />
+
+        <ImageButton
+            android:adjustViewBounds="true"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/social1"
+            android:src="@drawable/social_03"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:adjustViewBounds="true"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/social2"
+            android:src="@drawable/social_05"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:adjustViewBounds="true"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/social3"
+            android:src="@drawable/social_07"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:layout_weight="1" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10" />
+    </LinearLayout>
+</LinearLayout>
