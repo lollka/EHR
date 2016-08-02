@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements RadioListener {
     private ImageButton social3;
     TextView artist;//DZIESMAS NOSAUKUMS
     TextView song;
-    String url = "https://ehr.bluedroid.lv/";//DZIESMU NOSAUKUMU LINKS
+    String url = "http://ehr.lollka.me/";//DZIESMU NOSAUKUMU LINKS
     String audiostream = "http://stream.europeanhitradio.lv:8000/ehr.mp3";
     String artistname;
     String songname;
