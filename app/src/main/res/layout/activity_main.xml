@@ -6,33 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="lollka.ehr.MainActivity">
-<!--
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text=""
-            android:id="@+id/songName" />
-
-        <SeekBar
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/soundBar"
-            android:indeterminate="false" />
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/playButton"/>
-    </LinearLayout>
--->
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
@@ -50,7 +23,6 @@
             android:maxHeight="100dp"
             android:maxWidth="140dp" />
     </LinearLayout>
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
@@ -69,7 +41,6 @@
             android:background="#00000000"
             android:maxHeight="100dp" />
     </LinearLayout>
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
@@ -91,7 +62,6 @@
             android:id="@+id/artistName"
             android:gravity="center" />
     </LinearLayout>
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
