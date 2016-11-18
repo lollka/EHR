@@ -28,8 +28,6 @@ import static android.media.AudioManager.STREAM_MUSIC;
 public class MainActivity extends AppCompatActivity implements RadioListener {
     private ImageButton btn; //POGA
     private SeekBar volumebar; //SKAĻUMA LĪNIJA
-    private ImageButton audiomax;
-    private ImageButton audiomin;
     private ImageButton social1;
     private ImageButton social2;
     private ImageButton social3;
@@ -52,7 +50,6 @@ public class MainActivity extends AppCompatActivity implements RadioListener {
             handler.postDelayed(this, 0);
             int currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
             volumebar.setProgress(currentVolume);
-            //Log.d("LOLLKA", "Volume now " + currentVolume);
         }
     };
     @Override
@@ -94,20 +91,22 @@ public class MainActivity extends AppCompatActivity implements RadioListener {
                 public void onStopTrackingTouch(SeekBar seekBar) {
                 }
             });
-        }catch (Exception e){}
+        }catch (Exception e){e.printStackTrace();}
     }
     private void maxminvolume(){
         try{
-            audiomax = (ImageButton) findViewById(R.id.audiomax);
-            audiomin = (ImageButton) findViewById(R.id.audiomin);
+            ImageButton audiomax = (ImageButton) findViewById(R.id.audiomax);
+            ImageButton audiomin = (ImageButton) findViewById(R.id.audiomin);
             volumebar = (SeekBar) findViewById(R.id.soundBar);
             final AudioManager audioManager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
+            assert audiomin != null;
             audiomin.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                 audioManager.setStreamVolume(STREAM_MUSIC,0,0);
                 volumebar.setProgress(0);
                 }
             });
+            assert audiomax != null;
             audiomax.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     audioManager.setStreamVolume(STREAM_MUSIC, audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC), 0);
@@ -115,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements RadioListener {
                 }
             });
 
-        }catch (Exception e){}
+        }catch (Exception e){e.printStackTrace();}
     }
     //DZIESMAS NOSAUKUMS
     private class songDisplay extends AsyncTask<Void, Void, Void> {
@@ -127,10 +126,7 @@ public class MainActivity extends AppCompatActivity implements RadioListener {
                 JSONObject ehr = current.getJSONObject("ehr");
                 songname = ehr.getString("song");
                 artistname = ehr.getString("artist");
-                //Log.d("LOLLKA.JSON",songname+"|"+artistname);
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (JSONException e) {
+            } catch (IOException | JSONException e) {
                 e.printStackTrace();
             }
             return null;
